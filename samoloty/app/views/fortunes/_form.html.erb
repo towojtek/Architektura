@@ -1,0 +1,11 @@
+<%= simple_form_for @fortune, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.file_field :avatar %>
+  <%= f.input :quotation, :label => "Name",:input_html => { :rows => 8, :cols => 80 } %>
+   <%= f.input :source, :label => "Country" %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                fortunes_path, :class => 'btn' %>
+  </div>
+<% end %>
+
